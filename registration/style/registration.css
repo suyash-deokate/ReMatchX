@@ -1,0 +1,143 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #f9f9f9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.signup-container {
+    width: 90%;
+    max-width: 700px;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 30px 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.signup-container h2 {
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 24px;
+}
+
+.subtitle {
+    text-align: center;
+    color: #555;
+    font-size: 14px;
+    margin-bottom: 25px;
+}
+
+.signup-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.form-row input,
+.form-row select {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+/* 🔹 Input with icon */
+.input-icon {
+    position: relative;
+    flex: 1;
+}
+
+.input-icon i {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #666;
+    font-size: 14px;
+}
+
+.input-icon input {
+    width: 100%;
+    padding: 10px 10px 10px 32px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+.input-icon input::placeholder {
+    color: #aaa;
+}
+
+/* Avatar label */
+.avatar-label {
+    background: #eee;
+    padding: 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    display: inline-block;
+}
+
+#avatar {
+    display: none;
+}
+
+/* Button styling */
+.signup-btn {
+    margin-top: 15px;
+    width: 100%;
+    padding: 12px;
+    border: none;
+    background: #000;
+    color: white;
+    font-size: 15px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.signup-btn:hover {
+    background: #333;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .form-row {
+        flex-direction: column;
+    }
+}
+
+/* Wrap each input + error */
+.input-group {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Error message */
+.error {
+    color: red;
+    font-size: 12px;
+    margin-top: 4px;
+    min-height: 14px;
+}
+
+/* Error border */
+input.error-border,
+select.error-border {
+    border: 1px solid red !important;
+}
